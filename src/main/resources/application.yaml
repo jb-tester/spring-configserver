@@ -1,0 +1,21 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: spring-configserver-test
+  security:
+    basic:
+      enabled: true
+    user:
+      name: irina
+      password: jolt
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/jb-tester/configserver-myconfig # link to repository that contains the configuration
+          force-pull: true
+          skipSslValidation: true
+          timeout: 10
+          username: jb-tester
+          password: Isoomish0
